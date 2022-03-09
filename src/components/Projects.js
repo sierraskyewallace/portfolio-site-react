@@ -6,7 +6,7 @@ const Projects = (props) => {
         <div>
             {props.projects.map(project => {
                 return (
-                    <div>
+                    <div key={project.id}>
                         <h1>{project.name}</h1>
                         <p>{project.description}</p>
                     </div>
