@@ -1,11 +1,16 @@
 import React from "react";
-
+import { connect } from "react-redux";
+import ProjectsContainer from "./containers/projectsContainer";
 
 class App extends React.Component {
+
+  componentDidMount() {
+  }
+
   render() {
     return (
-      <div>
-        <h1>Hello Mason</h1>
+      <div className="App">
+        <ProjectsContainer projects={this.props.projects} />
       </div>
     );
   }
