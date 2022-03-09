@@ -8,6 +8,8 @@ const Projects = (props) => {
                 return (
                     <div key={project.id}>
                         <h1>{project.name}</h1>
+                        <image src={project.image_url} />
+                        <p>{project.github_url} hide this as "github link"</p>
                         <p>{project.description}</p>
                     </div>
                 )
