@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchProjects } from "../actions/fetchProjects";
 import { Route, Routes } from "react-router-dom";
 import Projects from "../components/Projects";
+import NavBar from "../components/NavBar";
 
 class ProjectsContainer extends React.Component {
 
@@ -16,12 +17,14 @@ state = {
 
   render() {
     return (
-      <div>
-        <h1>Projects</h1>
+      
+        <div className="container" >  
+        <NavBar />
         <Routes>
             <Route path="/" element={<Projects projects={this.props.projects} />} />
         </Routes>
-      </div>
+        </div>
+      
     );
   }
 }
